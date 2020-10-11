@@ -4,7 +4,8 @@ pipeline {
       stage ("git clone"){
         steps {
         echo "clone repo"
-        clone scm
+        git credentialsId: 'zzzakslls',
+        url: 'https://github.com/Naveen8036/testing.git'
         }
           
     }
