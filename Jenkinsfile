@@ -4,10 +4,12 @@ pipeline {
       stage ("git clone"){
         steps {
         echo "clone repo"
-        git credentialsId: 'zzzakslls',
-        url: 'https://github.com/Naveen8036/testing.git'
+       withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'Mandir', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+  sh 'echo $USERNAME $PASSWORD > naveen'
+}
+    echo ""
+}
         }
           
     }
    }
-}
