@@ -7,7 +7,7 @@ pipeline {
        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'Mandir', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
   sh 'echo $USERNAME $PASSWORD > naveen'
 }
-    echo ""
+    echo "hi lalithya"
 }
         }
           
